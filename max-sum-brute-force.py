@@ -10,16 +10,16 @@ while (True):
     for first in range(0, n):
       for last in range(first, n):
         if (first == last):
-          sumA = a[first]
-          if (sumA > maxSum):
-            maxSum = sumA
+          sum = a[first]
+          if (sum > maxSum):
+            maxSum = sum
             begin = end = first
         else:
-          sumB = 0
+          sum = 0
           for k in range(first, last+1):
-            sumB = sumB + a[k]
-            if (sumB > maxSum):
-              maxSum = sumB
+            sum = sum + a[k]
+            if (sum > maxSum):
+              maxSum = sum
               begin = first
               end = last
     print "maxSum: " + str(maxSum)
